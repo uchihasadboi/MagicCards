@@ -1,0 +1,111 @@
+:root {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: black;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/013/087/516/non_2x/diagonal-golden-line-glass-cube-on-black-background-illustration-of-website-banner-poster-sign-corporate-business-social-media-post-billboard-agency-advertising-media-motion-video-animation-wave-vector.jpg");
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.card {
+  border: 1px solid black;
+  height: 100%;
+  margin: 15px 25px;
+  width: 100%;
+  float: left;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+}
+
+.right-container {
+  background-color: rgb(190, 190, 190);
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.card-body {
+  color: black;
+  margin-top: 16px;
+  width: 200px;
+  padding-right: 40px;
+  margin-right: 70px;
+  padding-left: 20px;
+  margin-bottom: 50px;
+  margin-left: 25px;
+}
+
+.card-body>img {
+  margin-top: 15px;
+  margin-right: 60px;
+  height: 200px;
+  width: 150px;
+  float: left;
+  margin-bottom: 45px;
+}
+
+.Header {
+  padding-top: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  height: 100px;
+  background-color:#242424;
+  font-size: 500%;
+  color: white;
+  border-radius: 10px;
+}
+
+.Footer {
+  background-color: #242424;
+  font-style: italic;
+  font-size: smaller;
+  border-radius: 10px;
+}
+
+.Link {
+  font-style: oblique;
+}
+
+.HomePage {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size:50px;
+  background-color: rgba(0, 0, 0, 0.452);
+}
+
+.Rating {
+  margin-left: 465px;
+}
