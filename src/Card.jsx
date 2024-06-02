@@ -7,13 +7,14 @@ function Card(props) {
         <div class="card">
             <div class="card-top">
                 <h2>{props.cardName}</h2>
-                <p className='Rating'><HoverRating></HoverRating></p>             
+                <p className='Rating'><HoverRating></HoverRating></p>
+                <a href="/">{props.cardLink}</a>             
             </div>
             <div class="card-body">
                 <img src={props.cardImage} alt={""}></img>
             </div>
             <div>
-                <p>{props.cardDescription}</p>
+                <p className='gameInfo'>{props.cardDescription}</p>
             </div>
         </div>
     );
@@ -22,7 +23,8 @@ function Card(props) {
 Card.propTypes = {
     cardName: PropTypes.string.isRequired,
     cardImage: PropTypes.string.isRequired,
-    cardDescription: PropTypes.string.isRequired
+    cardDescription: PropTypes.string.isRequired,
+    cardLink: PropTypes.string.isRequired
   }
 
 export default Card

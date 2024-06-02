@@ -56,6 +56,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  color: black;
 }
 
 .card-body {
@@ -109,3 +110,8 @@ h1 {
 .Rating {
   margin-left: 465px;
 }
+
+.gameInfo {
+  text-align: left;
+}
+
