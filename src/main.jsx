@@ -8,6 +8,7 @@ import MagicDecks from "./MagicDecks";
 import YuGiOhDecks from "./YuGiOhDecks";
 import PokemonDecks from "./PokemonDecks";
 import HearthstoneDecks from "./HearthstoneDecks";
+import InputDecks from "./InputDecks";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
     path: "HearthstoneDecks",
     element: <HearthstoneDecks/>,
   },
+  {
+    path: "InputDecks",
+    element: <InputDecks/>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

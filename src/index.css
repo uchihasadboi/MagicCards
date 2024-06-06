@@ -116,5 +116,13 @@ h1 {
 }
 
 .Input {
-  margin-left: 25%;
+  margin-left: 20%;
+}
+
+.DeckInput {
+  margin-right: 5px;
+}
+
+.button {
+  padding-right: 10px;
 }

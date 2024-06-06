@@ -8,7 +8,8 @@ function Card(props) {
             <div class="card-top">
                 <h2>{props.cardName}</h2>
                 <p className='Rating'><HoverRating></HoverRating></p>
-                <a href="/">{props.cardLink}</a>             
+                <p><a href="/">{props.cardLink}</a></p>
+                <a href="/">{props.cardLink2}</a>          
             </div>
             <div class="card-body">
                 <img src={props.cardImage} alt={""}></img>
