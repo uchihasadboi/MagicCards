@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import HoverRating from './components/feedback';
 
 
-function YuGiOhDecks(props) {
+function YuGiOhDecks() {
     return (
         <div className="App">
             <h1 className='Header'>Yu-Gi-Oh Community Decks</h1>

@@ -5,7 +5,7 @@ import BasicButtons from './components/Button.jsx';
 import { TextFields } from '@mui/icons-material';
 
 
-function InputDecks(props) {
+function InputDecks() {
     return (
         <div className="App">
             <h1 className='Header'>Input Your Deck!</h1>

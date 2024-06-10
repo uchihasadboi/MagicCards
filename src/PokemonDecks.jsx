@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import HoverRating from './components/feedback';
 
 
-function PokemonDecks(props) {
+function PokemonDecks() {
     return (
         <div className="App">
             <h1 className='Header'>Pokémon Community Decks</h1>

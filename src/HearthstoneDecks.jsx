@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import HoverRating from './components/feedback';
 
 
-function HearthstoneDecks(props) {
+function HearthstoneDecks() {
     return (
         <div className="App">
             <h1 className='Header'>Hearthstone Community Decks</h1>
