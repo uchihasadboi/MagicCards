@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 export default function BasicButtons() {
   return (
     <Stack spacing={1} direction="row">
-      <Button variant="contained" className='button'>Add Another Row</Button>
+      <Button variant="contained" className='button'>Submit Deck</Button>
     </Stack>
   );
 }

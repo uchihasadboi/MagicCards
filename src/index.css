@@ -120,9 +120,14 @@ h1 {
 }
 
 .DeckInput {
-  margin-right: 5px;
+  width: 100%;
+  margin: 5px;
 }
 
 .button {
   padding-right: 10px;
+}
+
+.InputButton {
+  margin-left: 65.5%;
 }

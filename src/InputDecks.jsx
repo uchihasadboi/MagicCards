@@ -11,7 +11,16 @@ function InputDecks(props) {
             <h1 className='Header'>Input Your Deck!</h1>
             <div class="right-container">
                 <p className='DeckInput'><BasicTextFields></BasicTextFields></p>
-                <p className='button'><BasicButtons></BasicButtons></p>
+                <p className='DeckInput'><BasicTextFields></BasicTextFields></p>
+                <p className='DeckInput'><BasicTextFields></BasicTextFields></p>
+                <p className='DeckInput'><BasicTextFields></BasicTextFields></p>
+                <p className='DeckInput'><BasicTextFields></BasicTextFields></p>
+                <p className='DeckInput'><BasicTextFields></BasicTextFields></p>
+                <p className='DeckInput'><BasicTextFields></BasicTextFields></p>
+                <p className='DeckInput'><BasicTextFields></BasicTextFields></p>
+                <p className='DeckInput'><BasicTextFields></BasicTextFields></p>
+                <p className='DeckInput'><BasicTextFields></BasicTextFields></p>
+                <p className='InputButton'><BasicButtons></BasicButtons></p>
             </div>
             <div className='Footer'>
                 <a href="GamesList">Games List</a>
