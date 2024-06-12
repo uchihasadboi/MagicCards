@@ -30,8 +30,8 @@ function createData(name, calories, fat, carbs, protein) {
       },
       {
         date: '2020-01-02',
-        customerId: 'Anonymous',
-        amount: 1,
+        customerId: 'Pot of Greed',
+        amount: 5,
       },
     ],
   };
@@ -117,9 +117,6 @@ Row.propTypes = {
 const rows = [
   createData('Kaiba', 4.7, 50),
   createData('Yugi', 4.8, 50),
-  createData('Eclair', 262, 16.0),
-  createData('Cupcake', 305, 3.7),
-  createData('Gingerbread', 356, 16.0),
 ];
 
 export default function CollapsibleTableMagic() {
