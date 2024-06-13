@@ -1,4 +1,3 @@
-// CollapsibleTable.jsx
 import React, { useState } from 'react';
 import {
   Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Collapse, IconButton, Box,
@@ -8,46 +7,34 @@ import { KeyboardArrowDown, KeyboardArrowUp } from '@mui/icons-material';
 // Sample data structure for decks and cards
 const sampleData = [
   {
-    author: 'Duke',
-    rating: 4.3,
+    author: 'Gregory',
+    rating: 4.9,
     cardCount: 60,
     cards: [
-      { name: 'Raffine, Scheming Seer', type: 'Creature', quantity: 4 },
-      { name: 'Luminarch Aspirant', type: 'Creature', quantity: 4 },
-      { name: 'Elite Spellbinder', type: 'Creature', quantity: 3 },
-      { name: 'Skyclave Apparition', type: 'Creature', quantity: 4 },
-      { name: 'Shadrix Silverquill', type: 'Creature', quantity: 4 },
-      { name: 'Legion Angel', type: 'Creature', quantity: 3 },
-      { name: 'The Wandering Emperor', type: 'Planeswalker', quantity: 3 },
-      { name: 'Kaya the Inexorable', type: 'Planeswalker', quantity: 2 },
-      { name: 'Thoughtseize', type: 'Spell', quantity: 4 },
-      { name: 'Fatal Push', type: 'Spell', quantity: 4 },
-      { name: 'Vanishing Verse', type: 'Spell', quantity: 2 },
-      { name: 'Infernal Grasp', type: 'Spell', quantity: 2 },
-      { name: 'The Meathook Massacre', type: 'Spell', quantity: 2 },
-      { name: 'Wedding Announcement', type: 'Spell', quantity: 2 },
-      { name: 'The Celestus', type: 'Artifact', quantity: 2 },
-      { name: 'Watery Grave', type: 'Land', quantity: 4 },
-      { name: 'Hallowed Fountain', type: 'Land', quantity: 4 },
-      { name: 'Godless Shrine', type: 'Land', quantity: 4 },
-      { name: 'Pathway lands', type: 'Land', quantity: 4 },
-      { name: 'Field of Ruin', type: 'Land', quantity: 2 },
-      { name: 'Swamp', type: 'Land', quantity: 2 },
+      { name: 'Death Knight (Blood)', type: 'Hero', quantity: 1 },
+      { name: 'Blood Boil', type: 'Spell', quantity: 2 },
+      { name: 'Heart Strike', type: 'Spell', quantity: 2 },
+      { name: 'Hematurge', type: 'Spell', quantity: 2 },
+      { name: 'Obliterate', type: 'Spell', quantity: 2 },
+      { name: 'Vampiric Blood', type: 'Spell', quantity: 2 },
+      { name: 'Death Strike', type: 'Spell', quantity: 2 },
+      { name: 'Corpse Explosion', type: 'Spell', quantity: 2 },
+      { name: 'Deathchiller', type: 'Spell', quantity: 2 },
+      { name: 'Patchwerk', type: 'Spell', quantity: 2 },
+      { name: 'Alexandros Mograine', type: 'Spell', quantity: 2 },
+      { name: 'Hematurge', type: 'Utility', quantity: 2 },
+      { name: 'School Teacher', type: 'Utility', quantity: 2 },
+      { name: 'Gnome Muncher', type: 'Utility', quantity: 2 },
+      { name: 'Blood Boil Brute', type: 'Minion', quantity: 2 },
+      { name: 'Lady Deathwhisper', type: 'Minion', quantity: 2 },
+      { name: 'Sylvanas the Accused', type: 'Minion', quantity: 2 },
+      { name: 'Theotar, the Mad Duke', type: 'Greater Minion', quantity: 1 },
+      { name: 'Prince Renathal', type: 'Greater Minion', quantity: 1 },
     ],
   },
-  {
-    author: 'IZ NO GOBLIN',
-    rating: 5.0,
-    cardCount: 60,
-    cards: [
-      { name: 'Goblin', type: 'Creature', quantity: 40 },
-      { name: 'Mountain', type: 'Land', quantity: 20 },
-    ],
-  },
-  // Add more deck data as needed
 ];
 
-function CollapsibleTableMagic() {
+function CollapsibleTableHearthstone() {
   const [openRow, setOpenRow] = useState(null);
 
   const handleClick = (index) => {
@@ -116,4 +103,4 @@ function CollapsibleTableMagic() {
   );
 }
 
-export default CollapsibleTableMagic;
+export default CollapsibleTableHearthstone;

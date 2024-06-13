@@ -8,46 +8,53 @@ import { KeyboardArrowDown, KeyboardArrowUp } from '@mui/icons-material';
 // Sample data structure for decks and cards
 const sampleData = [
   {
-    author: 'Duke',
-    rating: 4.3,
-    cardCount: 60,
+    author: 'Yugi',
+    rating: 2.3,
+    cardCount: 40,
     cards: [
-      { name: 'Raffine, Scheming Seer', type: 'Creature', quantity: 4 },
-      { name: 'Luminarch Aspirant', type: 'Creature', quantity: 4 },
-      { name: 'Elite Spellbinder', type: 'Creature', quantity: 3 },
-      { name: 'Skyclave Apparition', type: 'Creature', quantity: 4 },
-      { name: 'Shadrix Silverquill', type: 'Creature', quantity: 4 },
-      { name: 'Legion Angel', type: 'Creature', quantity: 3 },
-      { name: 'The Wandering Emperor', type: 'Planeswalker', quantity: 3 },
-      { name: 'Kaya the Inexorable', type: 'Planeswalker', quantity: 2 },
-      { name: 'Thoughtseize', type: 'Spell', quantity: 4 },
-      { name: 'Fatal Push', type: 'Spell', quantity: 4 },
-      { name: 'Vanishing Verse', type: 'Spell', quantity: 2 },
-      { name: 'Infernal Grasp', type: 'Spell', quantity: 2 },
-      { name: 'The Meathook Massacre', type: 'Spell', quantity: 2 },
-      { name: 'Wedding Announcement', type: 'Spell', quantity: 2 },
-      { name: 'The Celestus', type: 'Artifact', quantity: 2 },
-      { name: 'Watery Grave', type: 'Land', quantity: 4 },
-      { name: 'Hallowed Fountain', type: 'Land', quantity: 4 },
-      { name: 'Godless Shrine', type: 'Land', quantity: 4 },
-      { name: 'Pathway lands', type: 'Land', quantity: 4 },
-      { name: 'Field of Ruin', type: 'Land', quantity: 2 },
-      { name: 'Swamp', type: 'Land', quantity: 2 },
+      { name: 'La Jinn the Mystical Genie of the Lamp', type: 'Monster', quantity: 3 },
+      { name: 'Battle Ox', type: 'Monster', quantity: 3 },
+      { name: 'Gemini Elf', type: 'Monster', quantity: 3 },
+      { name: 'Vorse Raider', type: 'Monster', quantity: 3 },
+      { name: 'Goblin Attack Force', type: 'Monster', quantity: 2 },
+      { name: 'Dark Elf', type: 'Monster', quantity: 2 },
+      { name: 'Kycoo the Ghost Destroyer', type: 'Monster', quantity: 2 },
+      { name: 'Man-Eater Bug', type: 'Monster', quantity: 2 },
+      { name: 'Raigeki', type: 'Spell', quantity: 1 },
+      { name: 'Dark Hole', type: 'Spell', quantity: 1 },
+      { name: 'Monster Reborn', type: 'Spell', quantity: 1 },
+      { name: 'Pot of Greed', type: 'Spell', quantity: 1 },
+      { name: 'Change of Heart', type: 'Spell', quantity: 1 },
+      { name: 'Heavy Storm', type: 'Spell', quantity: 1 },
+      { name: 'Mystical Space Typhoon', type: 'Spell', quantity: 1 },
+      { name: 'Axe of Despair', type: 'Spell', quantity: 1 },
+      { name: 'Fissure', type: 'Spell', quantity: 1 },
+      { name: 'Swords of Revealing Light', type: 'Spell', quantity: 1 },
+      { name: 'The Forceful Sentry', type: 'Spell', quantity: 1 },
+      { name: 'Snatch Steal', type: 'Spell', quantity: 1 },
+      { name: 'Mirror Force', type: 'Trap', quantity: 1 },
+      { name: 'Trap Hole', type: 'Trap', quantity: 1 },
+      { name: 'Magic Cylinder', type: 'Trap', quantity: 1 },
+      { name: 'Torrential Tribute', type: 'Trap', quantity: 1 },
+      { name: 'Call of the Haunted', type: 'Trap', quantity: 1 },
+      { name: 'Seven Tools of the Bandit', type: 'Trap', quantity: 1 },
+      { name: 'Dust Tornado', type: 'Trap', quantity: 1 },
+      { name: 'Sakuretsu Armor', type: 'Trap', quantity: 1 },
     ],
   },
   {
-    author: 'IZ NO GOBLIN',
+    author: 'Kaiba',
     rating: 5.0,
-    cardCount: 60,
+    cardCount: 40,
     cards: [
-      { name: 'Goblin', type: 'Creature', quantity: 40 },
-      { name: 'Mountain', type: 'Land', quantity: 20 },
+      { name: 'Blue Eyes White Dragon', type: 'Creature', quantity: 35 },
+      { name: 'Pot of Greed', type: 'Spell', quantity: 5 },
     ],
   },
   // Add more deck data as needed
 ];
 
-function CollapsibleTableMagic() {
+function CollapsibleTableYuGiOh() {
   const [openRow, setOpenRow] = useState(null);
 
   const handleClick = (index) => {
@@ -116,4 +123,4 @@ function CollapsibleTableMagic() {
   );
 }
 
-export default CollapsibleTableMagic;
+export default CollapsibleTableYuGiOh;

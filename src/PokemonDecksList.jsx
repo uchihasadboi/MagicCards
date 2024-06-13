@@ -8,46 +8,47 @@ import { KeyboardArrowDown, KeyboardArrowUp } from '@mui/icons-material';
 // Sample data structure for decks and cards
 const sampleData = [
   {
-    author: 'Duke',
-    rating: 4.3,
+    author: 'Cynthia',
+    rating: 4.6,
     cardCount: 60,
     cards: [
-      { name: 'Raffine, Scheming Seer', type: 'Creature', quantity: 4 },
-      { name: 'Luminarch Aspirant', type: 'Creature', quantity: 4 },
-      { name: 'Elite Spellbinder', type: 'Creature', quantity: 3 },
-      { name: 'Skyclave Apparition', type: 'Creature', quantity: 4 },
-      { name: 'Shadrix Silverquill', type: 'Creature', quantity: 4 },
-      { name: 'Legion Angel', type: 'Creature', quantity: 3 },
-      { name: 'The Wandering Emperor', type: 'Planeswalker', quantity: 3 },
-      { name: 'Kaya the Inexorable', type: 'Planeswalker', quantity: 2 },
-      { name: 'Thoughtseize', type: 'Spell', quantity: 4 },
-      { name: 'Fatal Push', type: 'Spell', quantity: 4 },
-      { name: 'Vanishing Verse', type: 'Spell', quantity: 2 },
-      { name: 'Infernal Grasp', type: 'Spell', quantity: 2 },
-      { name: 'The Meathook Massacre', type: 'Spell', quantity: 2 },
-      { name: 'Wedding Announcement', type: 'Spell', quantity: 2 },
-      { name: 'The Celestus', type: 'Artifact', quantity: 2 },
-      { name: 'Watery Grave', type: 'Land', quantity: 4 },
-      { name: 'Hallowed Fountain', type: 'Land', quantity: 4 },
-      { name: 'Godless Shrine', type: 'Land', quantity: 4 },
-      { name: 'Pathway lands', type: 'Land', quantity: 4 },
-      { name: 'Field of Ruin', type: 'Land', quantity: 2 },
-      { name: 'Swamp', type: 'Land', quantity: 2 },
+      { name: 'Comfey', type: 'Pokémon', quantity: 4 },
+      { name: 'Giratina V', type: 'Pokémon', quantity: 3 },
+      { name: 'Giratina VSTAR', type: 'Pokémon', quantity: 2 },
+      { name: 'Cramorant', type: 'Pokémon', quantity: 1 },
+      { name: 'Sableye', type: 'Pokémon', quantity: 2 },
+      { name: 'Radiant Greninja', type: 'Pokémon', quantity: 1 },
+      { name: 'Manaphy', type: 'Pokémon', quantity: 1 },
+      { name: 'Colress’s Experiment', type: 'Trainer', quantity: 6 },
+      { name: 'Mirage Gate', type: 'Trainer', quantity: 3 },
+      { name: 'Battle VIP Pass', type: 'Trainer', quantity: 4 },
+      { name: 'Scoop Up Net', type: 'Trainer', quantity: 4 },
+      { name: 'Switch', type: 'Trainer', quantity: 2 },
+      { name: 'Escape Rope', type: 'Trainer', quantity: 2 },
+      { name: 'Boss’s Orders', type: 'Trainer', quantity: 3 },
+      { name: 'Quick Ball', type: 'Trainer', quantity: 2 },
+      { name: 'Ultra Ball', type: 'Trainer', quantity: 2 },
+      { name: 'Ordinary Rod', type: 'Trainer', quantity: 2 },
+      { name: 'Lost Vacuum', type: 'Trainer', quantity: 2 },
+      { name: 'Temple of Sinnoh', type: 'Trainer', quantity: 2 },
+      { name: 'Psychic', type: 'Energy', quantity: 4 },
+      { name: 'Grass', type: 'Energy', quantity: 4 },
+      { name: 'Water', type: 'Energy', quantity: 3 },
+      { name: 'Capture', type: 'Energy', quantity: 3 },
     ],
   },
   {
-    author: 'IZ NO GOBLIN',
-    rating: 5.0,
-    cardCount: 60,
+    author: 'Ash',
+    rating: 1.2,
+    cardCount: 1,
     cards: [
-      { name: 'Goblin', type: 'Creature', quantity: 40 },
-      { name: 'Mountain', type: 'Land', quantity: 20 },
+      { name: 'Pikachu', type: 'Pokémon', quantity: 1 },
     ],
   },
   // Add more deck data as needed
 ];
 
-function CollapsibleTableMagic() {
+function CollapsibleTablePokemon() {
   const [openRow, setOpenRow] = useState(null);
 
   const handleClick = (index) => {
@@ -116,4 +117,4 @@ function CollapsibleTableMagic() {
   );
 }
 
-export default CollapsibleTableMagic;
+export default CollapsibleTablePokemon;
