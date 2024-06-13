@@ -128,8 +128,13 @@ h1 {
   padding-right: 10px;
 }
 
+.SubmitButton {
+  margin-left: 16%;
+  margin-bottom: 1%;
+}
 .InputButton {
-  margin-left: 65.5%;
+ margin-left: 30%;
+  padding-right: 10px;
 }
 
 .Table {
