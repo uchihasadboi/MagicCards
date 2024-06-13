@@ -1,142 +1,119 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import Box from '@mui/material/Box';
-import Collapse from '@mui/material/Collapse';
-import IconButton from '@mui/material/IconButton';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Typography from '@mui/material/Typography';
-import Paper from '@mui/material/Paper';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import HoverRating from './components/feedback';
+// CollapsibleTable.jsx
+import React, { useState } from 'react';
+import {
+  Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Collapse, IconButton, Box,
+} from '@mui/material';
+import { KeyboardArrowDown, KeyboardArrowUp } from '@mui/icons-material';
 
-function createData(name, calories, fat, carbs, protein) {
-  return {
-    name,
-    calories,
-    fat,
-    carbs,
-    protein,
-    history: [
-      {
-        date: '2020-01-05',
-        customerId: 'Blue Eyes White Dragon',
-        amount: 45,
-      },
-      {
-        date: '2020-01-02',
-        customerId: 'Pot of Greed',
-        amount: 5,
-      },
+// Sample data structure for decks and cards
+const sampleData = [
+  {
+    author: 'Duke',
+    rating: 4.3,
+    cardCount: 60,
+    cards: [
+      { name: 'Raffine, Scheming Seer', type: 'Creature', quantity: 4 },
+      { name: 'Luminarch Aspirant', type: 'Creature', quantity: 4 },
+      { name: 'Elite Spellbinder', type: 'Creature', quantity: 3 },
+      { name: 'Skyclave Apparition', type: 'Creature', quantity: 4 },
+      { name: 'Shadrix Silverquill', type: 'Creature', quantity: 4 },
+      { name: 'Legion Angel', type: 'Creature', quantity: 3 },
+      { name: 'The Wandering Emperor', type: 'Planeswalker', quantity: 3 },
+      { name: 'Kaya the Inexorable', type: 'Planeswalker', quantity: 2 },
+      { name: 'Thoughtseize', type: 'Spell', quantity: 4 },
+      { name: 'Fatal Push', type: 'Spell', quantity: 4 },
+      { name: 'Vanishing Verse', type: 'Spell', quantity: 2 },
+      { name: 'Infernal Grasp', type: 'Spell', quantity: 2 },
+      { name: 'The Meathook Massacre', type: 'Spell', quantity: 2 },
+      { name: 'Wedding Announcement', type: 'Spell', quantity: 2 },
+      { name: 'The Celestus', type: 'Artifact', quantity: 2 },
+      { name: 'Watery Grave', type: 'Land', quantity: 4 },
+      { name: 'Hallowed Fountain', type: 'Land', quantity: 4 },
+      { name: 'Godless Shrine', type: 'Land', quantity: 4 },
+      { name: 'Pathway lands', type: 'Land', quantity: 4 },
+      { name: 'Field of Ruin', type: 'Land', quantity: 2 },
+      { name: 'Swamp', type: 'Land', quantity: 2 },
     ],
-  };
-}
-
-function Row(props) {
-  const { row } = props;
-  const [open, setOpen] = React.useState(false);
-
-  return (
-    <React.Fragment>
-      <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
-        <TableCell>
-          <IconButton
-            aria-label="expand row"
-            size="small"
-            onClick={() => setOpen(!open)}
-          >
-            {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
-          </IconButton>
-        </TableCell>
-        <TableCell component="th" scope="row">
-          {row.name}
-        </TableCell>
-        <TableCell align="right">{row.calories}</TableCell>
-        <TableCell align="right">{row.fat}</TableCell>
-        <TableCell align="right">{row.carbs}</TableCell>
-        <TableCell align="right">{row.protein}</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
-          <Collapse in={open} timeout="auto" unmountOnExit>
-            <Box sx={{ margin: 1 }}>
-              <Typography variant="h6" gutterBottom component="div">
-
-              </Typography>
-              <Table size="small" aria-label="purchases">
-                <TableHead>
-                  <TableRow>
-                    <TableCell>Production Date</TableCell>
-                    <TableCell>Card Name</TableCell>
-                    <TableCell align="right">Quantity</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {row.history.map((historyRow) => (
-                    <TableRow key={historyRow.date}>
-                      <TableCell component="th" scope="row">
-                        {historyRow.date}
-                      </TableCell>
-                      <TableCell>{historyRow.customerId}</TableCell>
-                      <TableCell align="right">{historyRow.amount}</TableCell>
-
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </Box>
-          </Collapse>
-        </TableCell>
-      </TableRow>
-    </React.Fragment>
-  );
-}
-
-Row.propTypes = {
-  row: PropTypes.shape({
-    calories: PropTypes.number.isRequired,
-    carbs: PropTypes.number.isRequired,
-    fat: PropTypes.number.isRequired,
-    history: PropTypes.arrayOf(
-      PropTypes.shape({
-        amount: PropTypes.number.isRequired,
-        customerId: PropTypes.string.isRequired,
-        date: PropTypes.string.isRequired,
-      }),
-    ).isRequired,
-    name: PropTypes.string.isRequired,
-    protein: PropTypes.number.isRequired,
-  }).isRequired,
-};
-
-const rows = [
-  createData('Kaiba', 4.7, 50),
-  createData('Yugi', 4.8, 50),
+  },
+  {
+    author: 'IZ NO GOBLIN',
+    rating: 5.0,
+    cardCount: 60,
+    cards: [
+      { name: 'Goblin', type: 'Creature', quantity: 40 },
+      { name: 'Mountain', type: 'Land', quantity: 20 },
+    ],
+  },
+  // Add more deck data as needed
 ];
 
-export default function CollapsibleTableMagic() {
+function CollapsibleTable() {
+  const [openRow, setOpenRow] = useState(null);
+
+  const handleClick = (index) => {
+    setOpenRow(openRow === index ? null : index);
+  };
+
   return (
     <TableContainer component={Paper}>
       <Table aria-label="collapsible table">
         <TableHead>
           <TableRow>
             <TableCell />
-            <TableCell>Deck Author</TableCell>
-            <TableCell align="right">Avg. Rating</TableCell>
-            <TableCell align="right">Number of Cards</TableCell>
+            <TableCell>Author</TableCell>
+            <TableCell align="right">Average Rating</TableCell>
+            <TableCell align="right">Card Count</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <Row key={row.name} row={row} />
+          {sampleData.map((deck, index) => (
+            <React.Fragment key={index}>
+              <TableRow>
+                <TableCell>
+                  <IconButton
+                    aria-label="expand row"
+                    size="small"
+                    onClick={() => handleClick(index)}
+                  >
+                    {openRow === index ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
+                  </IconButton>
+                </TableCell>
+                <TableCell component="th" scope="row">{deck.author}</TableCell>
+                <TableCell align="right">{deck.rating}</TableCell>
+                <TableCell align="right">{deck.cardCount}</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={4}>
+                  <Collapse in={openRow === index} timeout="auto" unmountOnExit>
+                    <Box margin={1}>
+                      <Table size="small" aria-label="cards">
+                        <TableHead>
+                          <TableRow>
+                            <TableCell>Card Name</TableCell>
+                            <TableCell align="left">Card Type</TableCell>
+                            <TableCell align="right">Quantity</TableCell>
+                          </TableRow>
+                        </TableHead>
+                        <TableBody>
+                          {deck.cards.map((card, cardIndex) => (
+                            <TableRow key={cardIndex}>
+                              <TableCell component="th" scope="row">{card.name}</TableCell>
+                              <TableCell align="left">{card.type}</TableCell>
+                              <TableCell align="right">{card.quantity}</TableCell>
+                            </TableRow>
+                          ))}
+                        </TableBody>
+                      </Table>
+                    </Box>
+                  </Collapse>
+                </TableCell>
+              </TableRow>
+            </React.Fragment>
           ))}
         </TableBody>
       </Table>
     </TableContainer>
   );
 }
+
+export default CollapsibleTable;

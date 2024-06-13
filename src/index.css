@@ -30,7 +30,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: black;
-  background-image: url("https://static.vecteezy.com/system/resources/previews/013/087/516/non_2x/diagonal-golden-line-glass-cube-on-black-background-illustration-of-website-banner-poster-sign-corporate-business-social-media-post-billboard-agency-advertising-media-motion-video-animation-wave-vector.jpg");
+  background-image: url("https://static.vecteezy.com/system/resources/previews/008/218/160/non_2x/horizontal-topographic-map-black-topographer-seamless-pattern-dark-typography-linear-background-for-mapping-and-audio-equalizer-backdrop-illustration-vector.jpg");
 }
 
 h1 {
@@ -88,6 +88,8 @@ h1 {
   font-size: 500%;
   color: white;
   border-radius: 10px;
+  border-style: solid;
+  border-color: gold;
 }
 
 .Footer {
@@ -95,6 +97,8 @@ h1 {
   font-style: italic;
   font-size: smaller;
   border-radius: 10px;
+  border-style: solid;
+  border-color: gold;
 }
 
 .Link {
@@ -105,6 +109,10 @@ h1 {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 50px;
   background-color: rgba(0, 0, 0, 0.452);
+  border-radius: 10px;
+  width: 95%;
+  border-style: solid;
+  border-color: gold;
 }
 
 .Rating {
@@ -145,3 +153,4 @@ h1 {
 .ratingTable {
   margin-left: 72%;
 }
+
