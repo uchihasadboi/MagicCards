@@ -20,11 +20,11 @@ function InputDecks() {
                     </div>
                 ))}
                 <div className='InputButton'>
-                    <button onClick={addRow}>Add Another Row</button>
+                    <BasicButtons2 onClick={addRow}></BasicButtons2>
                 </div>
-                <div className='SubmitButton'>
+                <a href='InputDecks' className='SubmitButton'>
                     <BasicButtons />
-                </div>
+                </a>
             </div>
             <div className='Footer'>
                 <a href="GamesList">Games List</a>
