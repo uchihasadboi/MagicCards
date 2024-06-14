@@ -13,19 +13,19 @@ import InputDecks from "./InputDecks";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Home/>,
   },
   {
     path: "GamesList",
-    element: <App />,
+    element: <App/>,
   },
   {
     path: "MagicDecks",
-    element: <MagicDecks />,
+    element: <MagicDecks/>,
   },
   {
     path: "YuGiOhDecks",
-    element: <YuGiOhDecks />,
+    element: <YuGiOhDecks/>,
   },
   {
     path: "PokemonDecks",

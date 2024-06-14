@@ -1,4 +1,3 @@
-// CollapsibleTable.jsx
 import React, { useState } from 'react';
 import {
   Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Collapse, IconButton, Box,
@@ -45,7 +44,6 @@ const sampleData = [
       { name: 'Pikachu', type: 'Pokémon', quantity: 1 },
     ],
   },
-  // Add more deck data as needed
 ];
 
 function CollapsibleTablePokemon() {

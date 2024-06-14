@@ -1,4 +1,3 @@
-// CollapsibleTable.jsx
 import React, { useState } from 'react';
 import {
   Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Collapse, IconButton, Box,
@@ -51,7 +50,6 @@ const sampleData = [
       { name: 'Pot of Greed', type: 'Spell', quantity: 5 },
     ],
   },
-  // Add more deck data as needed
 ];
 
 function CollapsibleTableYuGiOh() {

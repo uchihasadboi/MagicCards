@@ -1,4 +1,3 @@
-// CollapsibleTable.jsx
 import React, { useState } from 'react';
 import {
   Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Collapse, IconButton, Box,
@@ -44,7 +43,6 @@ const sampleData = [
       { name: 'Mountain', type: 'Land', quantity: 20 },
     ],
   },
-  // Add more deck data as needed
 ];
 
 function CollapsibleTableMagic() {
